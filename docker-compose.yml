@@ -4,6 +4,6 @@ services:
   # use the same as https://hub.docker.com/r/jenkinsci/ssh-slave
   ssh-slave-ansible:
     build: .
-    image: seges/ssh-slave-ansible:1.0.0
+    image: seges/ssh-slave-ansible:1.0.2
 #    environment:
 #      - JENKINS_SLAVE_SSH_PUBKEY=abc...
