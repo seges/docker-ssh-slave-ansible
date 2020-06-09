@@ -19,7 +19,8 @@ RUN echo "===> Installing python, sudo, and supporting tools..."  && \
     \
     \
     echo "===> Installing handy tools (not absolutely required)..."  && \
-    apt-get install -y sshpass openssh-client  && \
+    apt-get install -y sshpass openssh-client && \
+    apt-get install -y python-jmespath  && \
     \
     \
     echo "===> Removing unused APT resources..."                  && \
@@ -38,4 +39,3 @@ ADD ssh/config /home/jenkins/.ssh/config
 RUN chmod 0600 /home/jenkins/.ssh && \
     chmod 0600 /home/jenkins/.ssh/config && \
     chown -R 1000:1000 /home/jenkins/.ssh
-
